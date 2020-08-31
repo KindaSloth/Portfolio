@@ -37,7 +37,7 @@ import BeTheHero from '../assets/bethehero.png'
 import Portfolio from '../assets/portfolio.png'
 import LinkedIn from '../assets/linkedinuiclone-desktop.png'
 import Twitter from '../assets/twitter.jpg'
-import PicPay from '../assets/picpay-logo-3.png'
+import PicPay from '../assets/picpay-logo.png'
 import Nubank from '../assets/nubank.jpg'
 import Insta from '../assets/insta.jpg'
 
