@@ -28,4 +28,4 @@ Extras:
 
 # 💻 Projeto
 
-![Portfolio](https://github.com/Guilherme775/Portfolio/blob/master/src/assets/portfolio.PNG)
+![Portfolio](https://github.com/Guilherme775/Portfolio/blob/master/src/assets/portfolio.png)
