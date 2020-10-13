@@ -65,7 +65,7 @@ const Home: React.FC = () => {
             <h1>Sobre mim</h1>
             <p>
               Hello World, meu nome é Guilherme tenho 17 anos atualmente e
-              estudo desenvolvimento dês de o ensino médio, estou cursando
+              estudo desenvolvimento desde o ensino médio, estou cursando
               Sistemas de Informação e sou técnico em desenvolvimento de
               sistemas pela Escola Técnica Estadual - ETEC, desde 2019. Estou
               sempre me atualizando e estudando as melhores e mais utilizadas
