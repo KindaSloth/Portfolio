@@ -3,12 +3,19 @@ import Head from 'next/head'
 
 import {
   Container,
-  Wrapper,
-  TextContainer,
-  ImageContainer,
+  HomeContainer,
+  Header,
+  Icon,
+  HeaderContent,
+  ContentContainer,
+  Title,
+  Description,
+  Avatar,
   AboutContainer,
-  AboutTextCard,
-  AboutTextContainer,
+  Hero,
+  AboutContent,
+  AboutTitle,
+  AboutDescription,
   Projects,
   CardContainer,
   Stacks,
@@ -30,7 +37,10 @@ import {
 
 import Card from '../components/Card'
 
-import Image from '../assets/image.png'
+import avatar from '../assets/avatar.jpg'
+
+import hero from '../assets/hero.png'
+
 import Proffy from '../assets/proffy.png'
 import Ecoleta from '../assets/ecoleta.png'
 import BeTheHero from '../assets/bethehero.png'
@@ -48,36 +58,41 @@ const Home: React.FC = () => {
         <title>Portfolio</title>
       </Head>
 
-      <Wrapper>
-        <TextContainer>
-          <h1>Guilherme Reis</h1>
-          <p>a javascript/typescript developer</p>
-        </TextContainer>
-
-        <ImageContainer>
-          <img src={Image} alt="image" />
-        </ImageContainer>
-      </Wrapper>
-
-      <AboutContainer>
-        <AboutTextCard>
-          <AboutTextContainer>
-            <h1>Sobre mim</h1>
-            <p>
-              Hello World, meu nome é Guilherme tenho 17 anos atualmente e
-              estudo desenvolvimento desde o ensino médio, estou cursando
-              Sistemas de Informação e sou técnico em desenvolvimento de
-              sistemas pela Escola Técnica Estadual - ETEC, desde 2019. Estou
-              sempre me atualizando e estudando as melhores e mais utilizadas
-              tecnologias do mercado, atualmente estou focado em Desenvolvimento
-              fullstack utilizando Node.js, React.js e React Native com a
-              linguagem JavaScript/TypeScript.
-            </p>
-          </AboutTextContainer>
-        </AboutTextCard>
+      <HomeContainer>
+        <Header>
+          <Icon />
+          <HeaderContent>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+          </HeaderContent>
+        </Header>
+        <ContentContainer>
+          <Title>Guilherme, Desenvolvedor Full Stack</Title>
+          <Description>
+            I think and code beautifully simple things, and I love what I do.
+          </Description>
+          <Avatar src={avatar} alt="avatar" />
+        </ContentContainer>
+      </HomeContainer>
+      <AboutContainer id="about">
+        <Hero src={hero} alt="hero" />
+        <AboutContent>
+          <AboutTitle>Sobre mim</AboutTitle>
+          <AboutDescription>
+            Hello World, meu nome é Guilherme tenho 17 anos atualmente e estudo
+            desenvolvimento desde o ensino médio, estou cursando Sistemas de
+            Informação e sou técnico em desenvolvimento de sistemas pela Escola
+            Técnica Estadual - ETEC, desde 2019. Estou sempre me atualizando e
+            estudando as melhores e mais utilizadas tecnologias do mercado,
+            atualmente estou focado em Desenvolvimento fullstack utilizando
+            Node.js, React.js e React Native com a linguagem
+            JavaScript/TypeScript.
+          </AboutDescription>
+        </AboutContent>
       </AboutContainer>
 
-      <Projects>
+      <Projects id="projects">
         <h1>Projects</h1>
         <p>
           Clique nos cards caso queira ver o código dos projetos em meu github
@@ -140,7 +155,8 @@ const Home: React.FC = () => {
         </CardContainer>
       </Projects>
 
-      <Stacks>
+      <Stacks id="skills">
+        <hr />
         <h1>Skills</h1>
         <p>Passe o mouse por cima do card para mais informações</p>
         <StacksContainer>
@@ -242,7 +258,6 @@ const Home: React.FC = () => {
           </StacksCard>
         </StacksContainer>
       </Stacks>
-
       <Footer>
         <IconsContainer>
           <GithubIcon

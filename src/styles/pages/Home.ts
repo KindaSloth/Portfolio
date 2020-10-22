@@ -11,124 +11,145 @@ import {
   SiLinkedin
 } from 'react-icons/si'
 
+import { FaDev } from 'react-icons/fa'
+
 export const Container = styled.div`
   height: 100vh;
 `
 
-export const Wrapper = styled.div`
-  height: 100%;
+export const HomeContainer = styled.div`
+  height: 100vh;
+`
+
+export const Header = styled.div`
+  width: 100%;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 1000px) {
+    padding: 10px;
+  }
+`
+
+export const Icon = styled(FaDev)`
+  width: 60px;
+  height: 60px;
+  color: #7510f7;
+  cursor: pointer;
+`
+
+export const HeaderContent = styled.p`
+  display: flex;
+  flex-direction: row;
+
+  > a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0 10px;
+    color: #333;
+
+    &:hover {
+      color: #7510f7;
+      cursor: pointer;
+    }
+  }
+`
+
+export const ContentContainer = styled.div`
+  width: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #2d3436;
-  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  text-align: center;
+`
 
-  @media (min-width: 1180px) {
-    height: 100%;
-    flex-direction: row;
-    justify-content: space-around;
+export const Title = styled.h1`
+  font-size: 48px;
+  font-family: sans-serif;
+  color: #141c3a;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 32px;
   }
 `
 
-export const TextContainer = styled.div`
-  > h1 {
-    font-size: 48px;
-    font-weight: bold;
-    text-align: center;
-  }
+export const Description = styled.p`
+  font-size: 24px;
+  font-family: sans-serif;
+  margin: 20px 0 30px 0;
 
-  > p {
+  @media screen and (max-width: 1000px) {
     font-size: 16px;
-    text-align: center;
-  }
-
-  @media (min-width: 1180px) {
-    > h1 {
-      font-size: 72px;
-      font-weight: bold;
-    }
-
-    > p {
-      font-size: 32px;
-      text-align: center;
-    }
   }
 `
 
-export const ImageContainer = styled.div`
-  > img {
-    width: 300px;
-    height: 300px;
-  }
-
-  @media (min-width: 1180px) {
-    > img {
-      width: 500px;
-      height: 500px;
-    }
-  }
+export const Avatar = styled.img`
+  border-radius: 50%;
 `
 
 export const AboutContainer = styled.div`
-  height: 100%;
-  background-color: #f0f0f7;
+  width: 100%;
+  height: 100vh;
+`
+
+export const Hero = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30%;
+
+  @media screen and (max-width: 1000px) {
+    width: 80%;
+  }
+`
+
+export const AboutContent = styled.div`
+  height: 70%;
+  background: #7510f7;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-`
+  text-align: center;
+  padding: 0 20%;
 
-export const AboutTextCard = styled.div`
-  @media (min-width: 700px) {
-    background: white;
-    display: flex;
-    width: 80%;
-    height: 80%;
-    box-shadow: 3px 3px 5px 6px #ccc;
-    align-items: center;
-    justify-content: center;
+  @media screen and (max-width: 1000px) {
+    padding: 0;
   }
 `
 
-export const AboutTextContainer = styled.div`
-  > h1 {
-    color: #333;
-    text-align: center;
-  }
+export const AboutTitle = styled.h1`
+  font-size: 32px;
+  font-family: sans-serif;
+  color: #fff;
+  margin: 20px 0;
+`
 
-  > p {
-    color: #333;
-    text-align: center;
-    margin-top: 16px;
-  }
+export const AboutDescription = styled.p`
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #fff;
 
-  @media (min-width: 1180px) {
-    width: 900px;
-    > h1 {
-      font-size: 72px;
-      font-weight: bold;
-      margin-top: 16px;
-    }
-
-    > p {
-      font-size: 32px;
-      margin-bottom: 16px;
-    }
-  }
-
-  @media (min-width: 700px) {
-    width: 80%;
+  @media screen and (max-width: 1000px) {
+    font-size: 16px;
   }
 `
+
 export const Projects = styled.div`
-  background-color: #2d3436;
-  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  background-color: #fff;
 
   > h1 {
     text-align: center;
     padding: 40px;
     font-weight: bold;
     font-size: 48px;
+    color: #141c3a;
 
     @media (min-width: 1180px) {
       font-size: 72px;
@@ -151,19 +172,23 @@ export const CardContainer = styled.div`
   overflow: hidden;
 `
 export const Stacks = styled.div`
-  background-color: #f0f0f7;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 
+  > hr {
+    width: 100%;
+  }
+
   > h1 {
     text-align: center;
     padding: 40px;
     font-weight: bold;
     font-size: 48px;
-    color: #333;
+    color: #141c3a;
 
     @media (min-width: 1180px) {
       font-size: 72px;
@@ -174,7 +199,6 @@ export const Stacks = styled.div`
     text-align: center;
     padding: 20px;
     font-size: 16px;
-    color: #333;
 
     @media (max-width: 768px) {
       display: none;
@@ -320,6 +344,7 @@ export const StackHtml = styled(ImHtmlFive2)`
   height: 100px;
   max-width: 100px;
   transition: 0.5s ease-in-out;
+  color: #fff;
 `
 
 export const StackCSS = styled(SiCss3)`
@@ -327,6 +352,7 @@ export const StackCSS = styled(SiCss3)`
   height: 100px;
   max-width: 100px;
   transition: 0.5s ease-in-out;
+  color: #fff;
 `
 
 export const StackJs = styled(SiJavascript)`
@@ -334,6 +360,7 @@ export const StackJs = styled(SiJavascript)`
   height: 100px;
   max-width: 100px;
   transition: 0.5s ease-in-out;
+  color: #fff;
 `
 
 export const StackTs = styled(SiTypescript)`
@@ -341,6 +368,7 @@ export const StackTs = styled(SiTypescript)`
   height: 100px;
   max-width: 100px;
   transition: 0.5s ease-in-out;
+  color: #fff;
 `
 
 export const StackNode = styled(SiNodeDotJs)`
@@ -348,6 +376,7 @@ export const StackNode = styled(SiNodeDotJs)`
   height: 100px;
   max-width: 100px;
   transition: 0.5s ease-in-out;
+  color: #fff;
 `
 
 export const StackReact = styled(SiReact)`
@@ -355,18 +384,18 @@ export const StackReact = styled(SiReact)`
   height: 100px;
   max-width: 100px;
   transition: 0.5s ease-in-out;
+  color: #fff;
 `
-
 export const Footer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #2d3436;
-  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  background-color: #7510f7;
 
   > p {
     margin-bottom: 16px;
+    color: #fff;
   }
 `
 
@@ -378,6 +407,7 @@ export const GithubIcon = styled(SiGithub)`
   padding: 20px;
   margin: 20px;
   cursor: pointer;
+  color: #fff;
 `
 
 export const LinkedIcon = styled(SiLinkedin)`
@@ -386,4 +416,5 @@ export const LinkedIcon = styled(SiLinkedin)`
   padding: 20px;
   margin: 20px;
   cursor: pointer;
+  color: #fff;
 `
