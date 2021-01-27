@@ -67,6 +67,7 @@ export const ContentContainer = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 0 2rem;
 `
 
 export const Title = styled.h1`
@@ -119,8 +120,8 @@ export const AboutContent = styled.div`
   text-align: center;
   padding: 0 20%;
 
-  @media screen and (max-width: 1000px) {
-    padding: 0;
+  @media screen and (max-width: 540px) {
+    padding: 0 20px;
   }
 `
 
@@ -134,6 +135,7 @@ export const AboutTitle = styled.h1`
 export const AboutDescription = styled.p`
   font-size: 20px;
   font-family: sans-serif;
+  line-height: 130%;
   color: #fff;
 
   @media screen and (max-width: 1000px) {

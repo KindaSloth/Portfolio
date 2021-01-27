@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import {
   Container,
@@ -68,7 +69,7 @@ const Home: React.FC = () => {
           </HeaderContent>
         </Header>
         <ContentContainer>
-          <Title>Guilherme, Desenvolvedor Full Stack</Title>
+          <Title>Guilherme, Desenvolvedor Front-end</Title>
           <Description>
             I think and code beautifully simple things, and I love what I do.
           </Description>
@@ -80,14 +81,12 @@ const Home: React.FC = () => {
         <AboutContent>
           <AboutTitle>Sobre mim</AboutTitle>
           <AboutDescription>
-            Hello World, meu nome é Guilherme tenho 17 anos atualmente e estudo
-            desenvolvimento desde o ensino médio, estou cursando Sistemas de
-            Informação e sou técnico em desenvolvimento de sistemas pela Escola
-            Técnica Estadual - ETEC, desde 2019. Estou sempre me atualizando e
-            estudando as melhores e mais utilizadas tecnologias do mercado,
-            atualmente estou focado em Desenvolvimento fullstack utilizando
-            Node.js, React.js e React Native com a linguagem
-            JavaScript/TypeScript.
+            Hello World, meu nome é Guilherme tenho 18 anos e atualmente estou
+            trabalhando como desenvolvedor front-end em uma software house.
+            Estudo desenvolvimento desde o ensino médio e estou sempre buscando
+            me atualizar e estudar tecnologias do meu interesse e bem utilizadas
+            pelo mercado, atualmente estou focado em desenvolvimento front-end
+            principalmente utilizando React e GraphQl.
           </AboutDescription>
         </AboutContent>
       </AboutContainer>
@@ -172,7 +171,11 @@ const Home: React.FC = () => {
                   marcação para a World Wide Web e é uma tecnologia chave da
                   Internet.
                 </p>
-                <a href="https://pt.wikipedia.org/wiki/HTML5">Read More</a>
+                <Link href="https://pt.wikipedia.org/wiki/HTML5">
+                  <a target="_blank" rel="noopener noreferrer">
+                    Read More
+                  </a>
+                </Link>
               </div>
             </StacksContent>
           </StacksCard>
@@ -188,7 +191,11 @@ const Home: React.FC = () => {
                   Sheets (ou simplesmente CSS), pela qual se define estilos para
                   um projeto web.
                 </p>
-                <a href="https://pt.wikipedia.org/wiki/CSS3">Read More</a>
+                <Link href="https://pt.wikipedia.org/wiki/CSS3">
+                  <a target="_blank" rel="noopener noreferrer">
+                    Read More
+                  </a>
+                </Link>
               </div>
             </StacksContent>
           </StacksCard>
@@ -204,7 +211,11 @@ const Home: React.FC = () => {
                   estruturada, de script em alto nível com tipagem dinâmica
                   fraca e multiparadigma.
                 </p>
-                <a href="https://www.javascript.com/">Read More</a>
+                <Link href="https://www.javascript.com/">
+                  <a target="_blank" rel="noopener noreferrer">
+                    Read More
+                  </a>
+                </Link>
               </div>
             </StacksContent>
           </StacksCard>
@@ -220,7 +231,11 @@ const Home: React.FC = () => {
                   Microsoft que adiciona tipagem e alguns outros recursos a
                   linguagem.
                 </p>
-                <a href="https://www.typescriptlang.org/">Read More</a>
+                <Link href="https://www.typescriptlang.org/">
+                  <a target="_blank" rel="noopener noreferrer">
+                    Read More
+                  </a>
+                </Link>
               </div>
             </StacksContent>
           </StacksCard>
@@ -235,7 +250,11 @@ const Home: React.FC = () => {
                   Node.js é um interpretador de JavaScript assíncrono com código
                   aberto orientado a eventos, criado por Ryan Dahl em 2009.
                 </p>
-                <a href="https://nodejs.org/en/">Read More</a>
+                <Link href="https://nodejs.org/en/">
+                  <a target="_blank" rel="noopener noreferrer">
+                    Read More
+                  </a>
+                </Link>
               </div>
             </StacksContent>
           </StacksCard>
@@ -252,7 +271,11 @@ const Home: React.FC = () => {
                   Facebook, Instagram, outras empresas e uma comunidade de
                   desenvolvedores individuais.
                 </p>
-                <a href="https://pt-br.reactjs.org/">Read More</a>
+                <Link href="https://pt-br.reactjs.org/">
+                  <a target="_blank" rel="noopener noreferrer">
+                    Read More
+                  </a>
+                </Link>
               </div>
             </StacksContent>
           </StacksCard>
@@ -260,17 +283,16 @@ const Home: React.FC = () => {
       </Stacks>
       <Footer>
         <IconsContainer>
-          <GithubIcon
-            onClick={() => {
-              window.location.href = 'https://github.com/Guilherme775'
-            }}
-          />
-          <LinkedIcon
-            onClick={() => {
-              window.location.href =
-                'https://www.linkedin.com/in/guilherme-dos-reis-meira-7462a31a6/'
-            }}
-          />
+          <Link href="https://github.com/Guilherme775">
+            <a target="_blank" rel="noopener noreferrer">
+              <GithubIcon />
+            </a>
+          </Link>
+          <Link href="https://www.linkedin.com/in/guilherme-dos-reis-meira-7462a31a6/">
+            <a target="_blank" rel="noopener noreferrer">
+              <LinkedIcon />
+            </a>
+          </Link>
         </IconsContainer>
         <p>@ 2020 Created by Guilherme All Rights Reserved.</p>
       </Footer>
